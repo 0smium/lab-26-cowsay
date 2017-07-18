@@ -8,7 +8,7 @@
     * Clone this repository: `git clone https://github.com/0smium/lab-26-cowsay.git`
     * Navigate to the newly created 'lab-26-cowsay' folder
     * Navigate to the the 'lab-steve' directory
-    * Install all node dependencies for the project: `yarn add all`
+    * Install all node dependencies for the project: `yarn install`
     * Use:
       * `yarn watch`
       * `npm start`
