@@ -22,8 +22,8 @@ class App extends React.Component {
     this.setState((state) => {
       return {
         count: state.count + 1,
-        // content: faker.hacker.phrase()
-        content: faker.lorem.words()
+        content: faker.hacker.phrase()
+        // content: faker.lorem.words()
       };
     });
   };
