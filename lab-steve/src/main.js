@@ -9,15 +9,10 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      title:
-      'Cowsay',
+      title: 'Cowsay',
       count: 0,
+      content: 'click the button',
     };
-
-    this.cow = cowsay.say({
-      text : faker.hacker.phrase(),
-    });
-
     this.handleClick = this.handleClick.bind(this);
   };
 
@@ -26,7 +21,9 @@ class App extends React.Component {
 
     this.setState((state) => {
       return {
-        count: state.count + 1
+        count: state.count + 1,
+        // content: faker.hacker.phrase()
+        content: faker.lorem.words()
       };
     });
   };
@@ -34,11 +31,14 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <h3>Generate Cowsay Hacker</h3>
         <button onClick={this.handleClick}> click me </button>
-        <p> {this.cow} </p>
+        <pre> {cowsay.say({text: this.state.content})} </pre>
+        <br />
+        <pre> Current State: {this.state.count} </pre>
       </div>
     )
   };
 };
 
-ReactDom.render(<App />, document.getElementById('root'))
+ReactDom.render(<App />, document.getElementById('root'));
